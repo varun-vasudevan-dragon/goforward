@@ -3,7 +3,7 @@
 Make requests to locally hosted backend services without worrying about CORS. Use a single endpoint to route requests to different ports
 
 ```
-http://localhost:1338/{MICROSERVICE_PORT}/}{PATH}
+http://localhost:1338/{MICROSERVICE_PORT}/{PATH}
 ```
 
 For example, if you start this service on 1338, you can query `http://localhost:1338/8090/v1/chat/channels` which will route the request to `http://localhost:8090/v1/chat/channels`
