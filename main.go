@@ -36,13 +36,8 @@ func getProxyURL(req *http.Request) string {
 	pathComponents := strings.Split(req.URL.Path, "/")
 	port := pathComponents[1]
 	path := strings.Join(pathComponents[2:], "/")
-	query := req.URL.RawQuery
 	destination := "http://localhost:" + port + "/" + path
-	if query != "" {
-		destination = destination + "?" + query
-	}
 	log.Printf("Redirecting to %s", destination)
-
 	return destination
 }
 
